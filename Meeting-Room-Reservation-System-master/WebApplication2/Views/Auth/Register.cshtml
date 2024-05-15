@@ -1,0 +1,23 @@
+﻿@using Entity.DTO;
+@model UserForRegisterDto
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <form asp-controller="Auth" asp-action="Register" method="post">
+        <div>
+            <label for="userForRegisterDto_email">E-posta:</label>
+            <input type="email" id="userForRegisterDto_email" name="userForRegisterDto.email" required />
+        </div>
+        <div>
+            <label for="userForRegisterDto_password">Şifre:</label>
+            <input type="password" id="userForRegisterDto_password" name="userForRegisterDto.password" required />
+        </div>
+        <div>
+            <button type="submit">Kayıt Ol</button>
+        </div>
+    </form>
+</div>
